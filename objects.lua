@@ -6,5 +6,6 @@ objects = {}
 function object.newPlayer(x, y)
     local newobj = {}
     newobj.body = love.physics.newBody(world, x, y, "dynamic")
-    newobj.shape = love.physics.newRectangleShape(1, 2)
+    newobj.shape = love.physics.newRectangleShape(64, 128)
+    newobj.fixture = love.physics.newFixture(newobj.body, newobj.shape)
 end
